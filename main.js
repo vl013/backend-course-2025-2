@@ -7,7 +7,7 @@ const nbBase = 'https://bank.gov.ua';
 const url = new URL('/NBUStatService/v1/statdirectory/exchange', nbBase);
 url.searchParams.set('valcode', currency);
 url.searchParams.set('date', exact_date);
-// зробимо &json без значення
+
 url.search = url.search + (url.search ? '&' : '') + 'json';
 
 console.log(url.toString());
